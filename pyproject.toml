@@ -1,0 +1,33 @@
+[project]
+name = "b32-statistical-modeling"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "FUJISHIGE TEMMA", email = "tenma.x0@gmail.com" }
+]
+dependencies = [
+    "numpy>=1.26.4",
+    "scipy>=1.13.0",
+    "matplotlib>=3.8.4",
+    "scikit-learn>=1.4.2",
+    "polars>=0.20.22",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ruff>=0.4.1",
+    "black>=24.4.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/b32_statistical_modeling"]
